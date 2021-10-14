@@ -1,5 +1,6 @@
 # Lec 1: Intro to React
-[***Lecture Slides***](https://docs.google.com/presentation/d/1yJxZqj1bRZkROWnlcb1EWopuu45v4XlhbQ3TOQjlq5s/edit?usp=sharing)
+[*Lecture Slides*](https://docs.google.com/presentation/d/1yJxZqj1bRZkROWnlcb1EWopuu45v4XlhbQ3TOQjlq5s/edit?usp=sharing)
+
 So far, we've been using HTML, CSS, JS to build websites. What downsides of making websites with HTML, CSS, JS from scratch have you noticed along so far? One downside is that your codebase quickly gets disorganized. Another downside is that helping out other team may have been difficult because their code is all over the place in your perspective.
 
 Lack of rules with plain JS is the reason why we use **frameworks** to build apps. Frameworks facilitate collaboration and organization that directly leads to better apps, which is what we want at BoG. For the next 4 weeks or so, we will be learning how to use one of many frontend frameworks, called [*React*](https://reactjs.org/).

@@ -1,0 +1,22 @@
+.reddit-img-logo {
+  width: 26px;
+  height: 26px;
+  padding: 8px 8px 8px 0;
+}
+.reddit-text-logo {
+  height: 14px;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logo {
+  padding: 0px 10px 0px 10px;
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  height: 36px;
+  background-color: #FFFFFF;
+}

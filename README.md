@@ -16,7 +16,7 @@ We used HTML to provide basic UI elements. If you wanted a div in HTML, you woul
 const title = <h1> Welcome to the Frontend Track! </h1>
 ReactDOM.render(title, document.getElementById('root'));
 ```
-This is equivalent to just declaring `<h1> Welcome to the Frontend Track! </h1>` in your HTML.
+This is equivalent to declaring `<h1> Welcome to the Frontend Track! </h1>` in your HTML.
 
 ### React Rendering
 When you call `render()`, React will look at the current DOM and try to find which element needs to be updated. Only DOM elements that have changed will update, though this means that if an element is nested, [all of its children will be updated](https://alexsidorenko.com/blog/react-render-always-rerenders/). This causes some performance issues, which we'll look into later with React hooks.

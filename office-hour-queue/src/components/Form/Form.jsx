@@ -5,6 +5,7 @@ export default function Form({ updateStudents, students }) {
   const [name, setName] = useState("");
   const [gtid, setGtid] = useState("");
   const [inquiry, setInquiry] = useState("");
+  
   const [hereForLab, setHereForLab] = useState(false);
 
   const handleSubmit = (event) => {
@@ -19,7 +20,6 @@ export default function Form({ updateStudents, students }) {
       <input type="text" placeholder="GTID" onChange={(e) => setGtid(e.target.value)}/>
 
       <textarea name="paragraph_text" 
-        cols="50" rows="10" 
         placeholder="Why are you here??"
         onChange={(e) => setInquiry(e.target.value)}
         ></textarea>

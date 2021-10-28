@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Queue from './components/Queue';
+import Layout from './components/Layout/Layout';
+import Main from './components/Main/Main';
 
 function App() {
   return (
     <div className="App">
-      <Queue/>
+      <Layout>
+        <Main/>
+      </Layout>
     </div>
   );
 }

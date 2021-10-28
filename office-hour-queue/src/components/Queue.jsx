@@ -37,7 +37,6 @@ export default function Queue() {
     setDisplayedStudents(newStudents)
   }, [displayOption, students.length])
 
-
   return (
     <div>
       <div>

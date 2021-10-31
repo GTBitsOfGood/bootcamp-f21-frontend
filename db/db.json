@@ -1,0 +1,11 @@
+{
+  "animals": [
+    {"id": "1","name": "Johnny","species": "dog", "location": "Atlanta, GA","img":"/image/dog.jpg", "description":"Hi I am Johnny!"},
+    {"id": "2","name": "Cecil", "species": "cat", "description":"Hi I am Cecil!", "location": "Atlanta, GA","img":"/image/cat.jpg"},
+    {"id": "3","name": "Cecil", "species": "cat", "description":"Hi I am Cecil!", "location": "Atlanta, GA","img":"/image/cat.jpg"},
+    {"id": "4","name": "Cecil", "species": "cat", "description":"Hi I am Cecil!", "location": "Atlanta, GA","img":"/image/cat.jpg"},
+    {"id": "5","name": "Cecil", "species": "cat", "description":"Hi I am Cecil!", "location": "Atlanta, GA","img":"/image/cat.jpg"},
+    {"id": "6","name": "Cecil", "species": "cat", "description":"Hi I am Cecil!", "location": "Atlanta, GA","img":"/image/cat.jpg"},
+    {"id": "7","name": "Cecil", "species": "cat", "description":"Hi I am Cecil!", "location": "Atlanta, GA","img":"/image/cat.jpg"}
+  ]
+}

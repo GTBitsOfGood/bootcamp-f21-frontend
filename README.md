@@ -1,34 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lecture 6: Dynamic Routing
 
-## Getting Started
+We briefly covered last time that we use NextJS for three main reasons.
+* Easy routing
+* Server Side Rendering & Static Site Generation
+* Easy deployment to Vercel
 
-First, run the development server:
+Today, we'll go more in detail what the first two bullet points mean. At the end of this workshop, you should be able to
+* Know what dynamic routes are
+* Implement dynamic routes to show blogposts in different routes
+* Use `getServerSideProps()` to implement server side rendering
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Benefit 1: Easy Routing
+Routes are important because they divide up the resources your user wants to view. Imagine wikipedia had one route. We would need a humongous HTML to include everything in Wikipedia. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+React is a framework for single page application, meaning it only has 1 route by default. You can't go to different routes (e.g. http://localhost:3000/about) in your React app right? Thanks to `react-router-dom`, routing is not impossible in React, but it's super difficult.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+NextJS makes routing very easy.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### `/pages` directory
+To implement a route in NextJS, all you have to do is create a file in `/pages` directory (`src/pages` for our repo). If you create a file called `/pages/about.js`, you can see that component being rendered in `http://localhost:3000/about`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Dynamic Routes
+If you are building a blog, you might wonder if you have to write a new file for each blogpost you write (`pages/bog/retreat.jsx`,`pages/bog/year-in-review.jsx`). NextJS understands this issue, which is why they offer dynamic routes.
 
-## Learn More
+Dynamic routes are routes that are not directly implemented in `pages/` directory. Unlike normal pages where it is named like `pages/blog/vacation.jsx`, it would be titled `pages/blog/[query].jsx`. In your `[query].jsx`, you would have to read what the requested URL was. If the user requested `/blog/atl-foods`, you would have to fetch and render data for `atl-foods`. Dynamic routes saves us from hardcoding every single routes we want to show.
 
-To learn more about Next.js, take a look at the following resources:
+### Server Side Rendering
+So how do we find out what `query` is in `localhost:3000/blog/[query]`? There are two ways to extract this information, which has to do with **server side rendering** and **static site generation**. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Now that we have routes, we are not making just one request to the server as we did in React. For each routes, you make a request for a new HTML. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+// TODO: Finish server side rendering and ssg, compare pros and cons
+// Describe how to use getServerSideProps()
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+

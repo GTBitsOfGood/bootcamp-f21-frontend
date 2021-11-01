@@ -29,11 +29,11 @@ Dynamic routes are routes that are not directly implemented in `pages/` director
 
 How does NextJS understand what content we should render on that page? In your component in `[query].jsx`, you would have to read what the requested URL was. If the user requested `/blog/atl-foods`, you would have to fetch and render data for `atl-foods`. If it was React, we would have used `useEffect` to fetch on initial render. You can do it like that in NextJS, but you can optimize it further. 
 
-### Server Side Rendering
 There are two ways to extract  what `query` is in `localhost:3000/blog/[query]`, which has to do with **server side rendering** and **static site generation**. 
 
-Now that we have routes, we are not making just one request to the server as we did in React. For each routes, you make a request for a new HTML. 
-
+### Server Side Rendering
+![image](https://user-images.githubusercontent.com/39681900/139674146-13efe382-36c6-478c-9c50-a39a7168280c.png | width=100)
+<img src={https://user-images.githubusercontent.com/39681900/139674146-13efe382-36c6-478c-9c50-a39a7168280c.png}/>
 // TODO: Finish server side rendering and ssg, compare pros and cons
 // Describe how to use getServerSideProps()
 

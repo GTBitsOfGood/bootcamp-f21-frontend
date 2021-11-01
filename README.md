@@ -13,9 +13,11 @@ Today, we'll go more in detail what the first two bullet points mean. At the end
 ## Benefit 1: Easy Routing
 Routes are important because they divide up the resources your user wants to view. Imagine wikipedia had one route. We would need a humongous HTML to include everything in Wikipedia. 
 
-React is a framework for single page application, meaning it only has 1 route by default. You can't go to different routes (e.g. http://localhost:3000/about) in your React app right? Thanks to `react-router-dom`, routing is not impossible in React, but it's super difficult.
+React is a framework for single page application, meaning it only has 1 route by default. You can't go to different routes (e.g. http://localhost:3000/about) in your React app right? 
 
-NextJS makes routing very easy.
+It is possible to implement routes in react via `react-router-dom`, but it's very difficult set it up for beginners. 
+
+Unlike React, NextJS makes routing very easy. 
 
 ### `/pages` directory
 To implement a route in NextJS, all you have to do is create a file in `/pages` directory (`src/pages` for our repo). If you create a file called `/pages/about.js`, you can see that component being rendered in `http://localhost:3000/about`.

@@ -32,8 +32,9 @@ How does NextJS understand what content we should render on that page? In your c
 There are two ways to extract  what `query` is in `localhost:3000/blog/[query]`, which has to do with **server side rendering** and **static site generation**. 
 
 ### Server Side Rendering
-![image](https://user-images.githubusercontent.com/39681900/139674146-13efe382-36c6-478c-9c50-a39a7168280c.png | width=100)
+![](https://user-images.githubusercontent.com/39681900/139674146-13efe382-36c6-478c-9c50-a39a7168280c.png | width=100)
 <img src={https://user-images.githubusercontent.com/39681900/139674146-13efe382-36c6-478c-9c50-a39a7168280c.png}/>
+<img src="https://camo.githubusercontent.com/331400aee821efda2e36ee9b3bc8bce93b975109/68747470733a2f2f6779617a6f2e636f6d2f65623563353734316236613961313663363932313730613431613439633835382e706e67" alt="" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
 // TODO: Finish server side rendering and ssg, compare pros and cons
 // Describe how to use getServerSideProps()
 

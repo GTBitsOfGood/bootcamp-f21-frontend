@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lecture 6: Dynamic Routing
 
-## Getting Started
+We briefly covered last time that we use NextJS for three main reasons.
+* Easy routing
+* Server Side Rendering & Static Site Generation
+* Easy deployment to Vercel
 
-First, run the development server:
+Today, we'll go more in detail what the first two bullet points mean. At the end of this workshop, you should be able to
+* Know what dynamic routes are
+* Implement dynamic routes to show blogposts in different routes
+* Use `getServerSideProps()` to implement server side rendering
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Benefit 1: Easy Routing
+Routes are important because they divide up the resources your user wants to view. Imagine wikipedia had one route. We would need a humongous HTML to include everything in Wikipedia. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+React is a framework for single page application, meaning it only has 1 route by default. You can't go to different routes (e.g. http://localhost:3000/about) in your React app right? 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+It is possible to implement routes in react via `react-router-dom`, but it's very difficult set it up for beginners. 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Unlike React, NextJS makes routing very easy. 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### `/pages` directory
+To implement a route in NextJS, all you have to do is create a file in `/pages` directory (`src/pages` for our repo). If you create a file called `/pages/about.js`, you can see that component being rendered in `http://localhost:3000/about`.
 
-## Learn More
+### Dynamic Routes
+If you are building a blog, you might wonder if you have to write a new file for each blogpost you write (`pages/bog/retreat.jsx`,`pages/bog/year-in-review.jsx`). Thankfully, you don't have to because NextJS offers dynamic routes.
 
-To learn more about Next.js, take a look at the following resources:
+Dynamic routes are routes that are not directly implemented in `pages/` directory. Unlike normal pages where it is named like `pages/blog/vacation.jsx`, it would be titled `pages/blog/[query].jsx`. By creating a file surrounded by angle brackets, we can now route to `localhost:3000/blog/123`, `localhost:3000/blog/eating-apples`, and any routes ending in the format of `/blog/[insert-your-text]`. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+How does NextJS understand what content we should render on that page? In your component in `[query].jsx`, you would have to read what the requested URL was. If the user requested `/blog/atl-foods`, you would have to fetch and render data for `atl-foods`. If it was React, we would have used `useEffect` to fetch on initial render. You can do it like that in NextJS, but you can optimize it further. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+There are two ways to extract  what `query` is in `localhost:3000/blog/[query]`, which has to do with **server side rendering** and **static site generation**. 
 
-## Deploy on Vercel
+### Server Side Rendering
+![](https://user-images.githubusercontent.com/39681900/139674146-13efe382-36c6-478c-9c50-a39a7168280c.png | width=100)
+<img src={https://user-images.githubusercontent.com/39681900/139674146-13efe382-36c6-478c-9c50-a39a7168280c.png}/>
+<img src="https://camo.githubusercontent.com/331400aee821efda2e36ee9b3bc8bce93b975109/68747470733a2f2f6779617a6f2e636f6d2f65623563353734316236613961313663363932313730613431613439633835382e706e67" alt="" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
+// TODO: Finish server side rendering and ssg, compare pros and cons
+// Describe how to use getServerSideProps()
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+

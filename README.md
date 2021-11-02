@@ -50,11 +50,19 @@ npm run dev      // starts our app. Open up your browser and navigate to http://
 ```
 Your `localhost:3000` should display this page.
 
-<img width="1105" alt="image" src="https://user-images.githubusercontent.com/39681900/139949270-fbc7c8b1-d8dc-408a-af18-730dd2e7330c.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/39681900/139949270-fbc7c8b1-d8dc-408a-af18-730dd2e7330c.png">
 
 ## Goal: Display a list of animals when you click the 'Browse' tab
 Notice that we have two tabs on the navbar: About and Browse. About is the first url you visit `localhost:3000`. Try clicking on 'browse' to navigate to `localhost:3000/browse`. You should see an empty page on that tab. Your job is to display a list of animals using NextJS's server side rendering feature!
 
+
+The final outcome should look like this. When you click on Browse tab, you should display a list of animals in some fashion, meaning it doesn't have to be a grid. Minimum requirement is to have the animal's name included along with its picture.
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/39681900/139958042-590d62fe-06ee-4609-9852-e1f89894276b.png">
+
+When you click on one of the animals, you should display a new page detailing about that specific animal. This page should be displayed on a new route!
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/39681900/139958183-7bcae8bb-b5fd-4e87-97a7-47c35e1ad82f.png">
 
 
 

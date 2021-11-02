@@ -1,0 +1,10 @@
+.imageContainer {
+  min-width: 400px;
+  min-height: 400px;
+  position: relative;
+  margin-right: 30px;;
+}
+
+.about {
+  display: flex;
+}

@@ -31,13 +31,29 @@ How does NextJS understand what content we should render on that page? In your c
 
 There are two ways to extract  what `query` is in `localhost:3000/blog/[query]`, which has to do with **server side rendering** and **static site generation**. 
 
-### Server Side Rendering
-![](https://user-images.githubusercontent.com/39681900/139674146-13efe382-36c6-478c-9c50-a39a7168280c.png | width=100)
-<img src={https://user-images.githubusercontent.com/39681900/139674146-13efe382-36c6-478c-9c50-a39a7168280c.png}/>
-<img src="https://camo.githubusercontent.com/331400aee821efda2e36ee9b3bc8bce93b975109/68747470733a2f2f6779617a6f2e636f6d2f65623563353734316236613961313663363932313730613431613439633835382e706e67" alt="" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
-// TODO: Finish server side rendering and ssg, compare pros and cons
-// Describe how to use getServerSideProps()
+## Benefit 2: Server Side Rendering
 
+
+# Exercise: Display animals in the animal shelter app
+## Getting Set Up
+First, checkout this branch and open vs code.
+```
+cd [path to this repository folder in your computer]
+git fetch
+git checkout lec-6-dynamic-routing
+code .
+```
+Once you have opened VS Code, open up a new terminal in VS Code and install dependencies first. Then start the app.
+```
+npm install      // installs dependencies, this is a comment btw
+npm run dev      // starts our app. Open up your browser and navigate to http://localhost:3000
+```
+Your `localhost:3000` should display this page.
+
+<img width="1105" alt="image" src="https://user-images.githubusercontent.com/39681900/139949270-fbc7c8b1-d8dc-408a-af18-730dd2e7330c.png">
+
+## Goal: Display a list of animals when you click the 'Browse' tab
+Notice that we have two tabs on the navbar: About and Browse. About is the first url you visit `localhost:3000`. Try clicking on 'browse' to navigate to `localhost:3000/browse`. You should see an empty page on that tab. Your job is to display a list of animals using NextJS's server side rendering feature!
 
 
 

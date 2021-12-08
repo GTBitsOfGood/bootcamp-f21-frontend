@@ -11,6 +11,7 @@ export default function Layout({ children }) {
           <nav>
             <Link href="/"><a> About </a></Link>
             <Link href="/browse"><a> Browse </a></Link>
+            <Link href="/addanimal"><a> Add Animal Form </a></Link>
           </nav>
         </div>
       </header>
